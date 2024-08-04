@@ -16,6 +16,7 @@
     gap: 12px;
     width: 100%;
     box-sizing: border-box;
+    flex-wrap: nowrap; /* Asegura que los elementos no se envuelvan */
 }
 
 .search-bar input {
@@ -28,6 +29,8 @@
     background: #ebfffc;
     font-size: 18px;
     flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 .search-bar img {
@@ -121,10 +124,15 @@
     }
 }
 
-/* Estilos responsivos específicos para pantallas muy pequeñas */
+/* Estilos responsivos específicos para pantallas pequeñas */
 @media (max-width: 338px) {
+    .search-bar {
+        flex-direction: row; /* Mantiene los elementos en una fila */
+    }
+
     .search-bar input {
-        padding-left: 10px;
+        width: calc(100% - 60px); /* Ajusta el ancho del input, restando el ancho del icono y el gap */
+        padding-left: 15px;
         font-size: 14px;
     }
 
