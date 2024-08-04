@@ -5,8 +5,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Evita el scroll horizontal en toda la página */
+}
+
 .app {
   min-height: 100vh;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #e2d4ff;
+  padding: 20px;
 }
